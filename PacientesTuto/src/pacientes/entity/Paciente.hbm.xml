@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 30-nov-2018 19:32:08 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pacientes.entity.Paciente" table="paciente" catalog="pacientes" optimistic-lock="version">
+        <id name="idpaciente" type="java.lang.Integer">
+            <column name="idpaciente" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="40" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" length="40" />
+        </property>
+        <property name="tipodoc" type="string">
+            <column name="tipodoc" length="20" />
+        </property>
+        <property name="nrodoc" type="java.lang.Integer">
+            <column name="nrodoc" />
+        </property>
+        <property name="telefono" type="java.lang.Integer">
+            <column name="telefono" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="60" />
+        </property>
+        <set name="domicilios" table="domicilio" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fkidpaciente" />
+            </key>
+            <one-to-many class="pacientes.entity.Domicilio" />
+        </set>
+    </class>
+</hibernate-mapping>
