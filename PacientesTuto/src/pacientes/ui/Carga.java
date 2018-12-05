@@ -5,6 +5,13 @@
  */
 package pacientes.ui;
 
+import java.util.List;
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import paciente.util.HibernateUtil;
+import pacientes.entity.Paciente;
+
 /**
  *
  * @author mrjab
@@ -40,6 +47,7 @@ public class Carga extends javax.swing.JFrame {
         Vemail = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        Bguardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +112,14 @@ public class Carga extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setText("Por favor ingrese los datos:");
 
+        Bguardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Bguardar.setText("Guardar");
+        Bguardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BguardarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -144,6 +160,10 @@ public class Carga extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(Vemail, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)))))
                 .addGap(10, 10, 10))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Bguardar)
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,7 +186,9 @@ public class Carga extends javax.swing.JFrame {
                     .addComponent(Vemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel4))
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(Bguardar)
+                .addGap(25, 25, 25))
         );
 
         pack();
@@ -195,6 +217,10 @@ public class Carga extends javax.swing.JFrame {
     private void VnombreComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_VnombreComponentAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_VnombreComponentAdded
+
+    private void BguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BguardarActionPerformed
+        runQueryGuardar();
+    }//GEN-LAST:event_BguardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,6 +258,7 @@ public class Carga extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Bguardar;
     private javax.swing.JTextField Vapellido;
     private javax.swing.JTextField Vemail;
     private javax.swing.JTextField Vnombre;
@@ -246,4 +273,32 @@ public class Carga extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
+
+private void runQueryGuardar() {
+    executeHQLQuery();
 }
+
+private void executeHQLQuery() {
+    try {
+	Session session = HibernateUtil.getSessionFactory().openSession();
+	session.beginTransaction();
+       
+	//Add new Employee object
+	Paciente p = new Paciente();
+	p.setIdpaciente(null);
+	p.setNombre(Vnombre);
+	p.setApellido(Vapellido);
+        p.setTipodoc(Vtipodoc);
+	p.setNrodoc(Vnro);
+        p.setTelefono(Vtelefono);
+        p.setEmail(Vemail);
+	session.save(p);
+
+	session.getTransaction().commit();
+    } catch (HibernateException he) {
+        he.printStackTrace();
+    }
+}
+
+}
+
