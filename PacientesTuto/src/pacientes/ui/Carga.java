@@ -34,6 +34,9 @@ public class Carga extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        VentanaGuardar = new javax.swing.JDialog();
+        jLabel8 = new javax.swing.JLabel();
+        okButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -48,6 +51,47 @@ public class Carga extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         Bguardar = new javax.swing.JButton();
+        listapaciente = new javax.swing.JButton();
+
+        VentanaGuardar.setMinimumSize(new java.awt.Dimension(335, 150));
+        VentanaGuardar.setModal(true);
+        VentanaGuardar.setPreferredSize(new java.awt.Dimension(326, 105));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setText("El paciente fue guardado exitosamente");
+        jLabel8.setMinimumSize(new java.awt.Dimension(306, 95));
+
+        okButton.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        okButton.setText("OK");
+        okButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                okButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout VentanaGuardarLayout = new javax.swing.GroupLayout(VentanaGuardar.getContentPane());
+        VentanaGuardar.getContentPane().setLayout(VentanaGuardarLayout);
+        VentanaGuardarLayout.setHorizontalGroup(
+            VentanaGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VentanaGuardarLayout.createSequentialGroup()
+                .addGroup(VentanaGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(VentanaGuardarLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(VentanaGuardarLayout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(okButton)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        VentanaGuardarLayout.setVerticalGroup(
+            VentanaGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VentanaGuardarLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(okButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -114,9 +158,22 @@ public class Carga extends javax.swing.JFrame {
 
         Bguardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Bguardar.setText("Guardar");
+        Bguardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BguardarMouseClicked(evt);
+            }
+        });
         Bguardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BguardarActionPerformed(evt);
+            }
+        });
+
+        listapaciente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        listapaciente.setText("Volver a lista de pacientes");
+        listapaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listapacienteActionPerformed(evt);
             }
         });
 
@@ -128,42 +185,45 @@ public class Carga extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Vtipodoc, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Vnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(Vapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Vtelefono))
+                                .addComponent(jLabel7)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(jLabel5)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Vtipodoc, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(jLabel1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Vnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel2)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Vnro, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Vemail, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)))))
-                .addGap(10, 10, 10))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Bguardar)
-                .addGap(25, 25, 25))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Vapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Vtelefono))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Vnro, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel6)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Vemail, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)))))
+                        .addGap(10, 10, 10))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(listapaciente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Bguardar)
+                        .addGap(25, 25, 25))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,7 +247,9 @@ public class Carga extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addComponent(Bguardar)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Bguardar)
+                    .addComponent(listapaciente))
                 .addGap(25, 25, 25))
         );
 
@@ -221,6 +283,20 @@ public class Carga extends javax.swing.JFrame {
     private void BguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BguardarActionPerformed
         runQueryGuardar();
     }//GEN-LAST:event_BguardarActionPerformed
+
+    private void listapacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listapacienteActionPerformed
+        Lista l=new Lista();
+        l.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_listapacienteActionPerformed
+
+    private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
+        VentanaGuardar.dispose();
+    }//GEN-LAST:event_okButtonActionPerformed
+
+    private void BguardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BguardarMouseClicked
+        this.VentanaGuardar.setVisible(true);
+    }//GEN-LAST:event_BguardarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -261,6 +337,7 @@ public class Carga extends javax.swing.JFrame {
     private javax.swing.JButton Bguardar;
     private javax.swing.JTextField Vapellido;
     private javax.swing.JTextField Vemail;
+    private javax.swing.JDialog VentanaGuardar;
     private javax.swing.JTextField Vnombre;
     private javax.swing.JTextField Vnro;
     private javax.swing.JTextField Vtelefono;
@@ -272,6 +349,9 @@ public class Carga extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JButton listapaciente;
+    private javax.swing.JButton okButton;
     // End of variables declaration//GEN-END:variables
 
 private void runQueryGuardar() {
@@ -286,12 +366,12 @@ private void executeHQLQuery() {
 	//Add new Employee object
 	Paciente p = new Paciente();
 	p.setIdpaciente(null);
-	p.setNombre(Vnombre);
-	p.setApellido(Vapellido);
-        p.setTipodoc(Vtipodoc);
-	p.setNrodoc(Vnro);
-        p.setTelefono(Vtelefono);
-        p.setEmail(Vemail);
+	p.setNombre(Vnombre.getText());
+	p.setApellido(Vapellido.getText());
+        p.setTipodoc(Vtipodoc.getSelectedItem().toString());
+	p.setNrodoc(Integer.valueOf(Vnro.getText()));
+        p.setTelefono(Integer.valueOf(Vtelefono.getText()));
+        p.setEmail(Vemail.getText());
 	session.save(p);
 
 	session.getTransaction().commit();

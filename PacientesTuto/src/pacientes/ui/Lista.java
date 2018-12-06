@@ -43,8 +43,14 @@ public class Lista extends javax.swing.JFrame {
         Carga = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Resultados = new javax.swing.JTable();
+        EliminarPaciente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         Actualizar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Actualizar.setText("Actualizar");
@@ -55,7 +61,7 @@ public class Lista extends javax.swing.JFrame {
         });
 
         Carga.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        Carga.setText("Carga / Eliminacion");
+        Carga.setText("Carga de pacientes");
         Carga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CargaActionPerformed(evt);
@@ -94,6 +100,14 @@ public class Lista extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(Resultados);
 
+        EliminarPaciente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        EliminarPaciente.setText("Eliminar pacientes");
+        EliminarPaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarPacienteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -104,6 +118,8 @@ public class Lista extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 523, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Actualizar)
+                        .addGap(18, 18, 18)
+                        .addComponent(EliminarPaciente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Carga)))
                 .addContainerGap())
@@ -114,7 +130,8 @@ public class Lista extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Actualizar)
-                    .addComponent(Carga))
+                    .addComponent(Carga)
+                    .addComponent(EliminarPaciente))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -132,6 +149,16 @@ public class Lista extends javax.swing.JFrame {
         a.setVisible(true);
         dispose();
     }//GEN-LAST:event_CargaActionPerformed
+
+    private void EliminarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarPacienteActionPerformed
+        Eliminar e=new Eliminar();
+        e.setVisible(true);
+        
+    }//GEN-LAST:event_EliminarPacienteActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        runQueryActualizar();
+    }//GEN-LAST:event_formWindowOpened
 
     private void displayResult(List resultList) {
     Vector<String> tableHeaders = new Vector<String>();
@@ -200,6 +227,7 @@ public class Lista extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Actualizar;
     private javax.swing.JButton Carga;
+    private javax.swing.JButton EliminarPaciente;
     private javax.swing.JTable Resultados;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
