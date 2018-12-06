@@ -39,6 +39,7 @@ public class Eliminar extends javax.swing.JFrame {
         Vid = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         BotonEliminar = new javax.swing.JButton();
+        CerrarVentana = new javax.swing.JButton();
 
         confirmaeliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         confirmaeliminar.setMinimumSize(new java.awt.Dimension(302, 140));
@@ -101,6 +102,14 @@ public class Eliminar extends javax.swing.JFrame {
             }
         });
 
+        CerrarVentana.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        CerrarVentana.setText("Cerrar");
+        CerrarVentana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CerrarVentanaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -113,9 +122,11 @@ public class Eliminar extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Vid, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BotonEliminar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BotonEliminar)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                        .addComponent(CerrarVentana)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,8 +137,9 @@ public class Eliminar extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(Vid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BotonEliminar))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(BotonEliminar)
+                    .addComponent(CerrarVentana))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -144,6 +156,10 @@ public class Eliminar extends javax.swing.JFrame {
     private void BotonEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonEliminarMouseClicked
         this.confirmaeliminar.setVisible(true);
     }//GEN-LAST:event_BotonEliminarMouseClicked
+
+    private void CerrarVentanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarVentanaActionPerformed
+        dispose();
+    }//GEN-LAST:event_CerrarVentanaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,6 +198,7 @@ public class Eliminar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonEliminar;
+    private javax.swing.JButton CerrarVentana;
     private javax.swing.JTextField Vid;
     private javax.swing.JButton botonokeliminar;
     private javax.swing.JDialog confirmaeliminar;
