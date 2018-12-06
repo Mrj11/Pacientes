@@ -12,7 +12,7 @@ import pacientes.entity.Paciente;
 
 /**
  *
- * @author alumno
+ * @author puto el que lee
  */
 public class Eliminar extends javax.swing.JFrame {
 
