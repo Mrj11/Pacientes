@@ -39,7 +39,7 @@ public class principal extends javax.swing.JFrame {
         jLabel1.setText("Bienvenido al sistema de consulta y gestion de pacientes");
 
         botonconsulta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        botonconsulta.setText("Consultar pacientes");
+        botonconsulta.setText("Consultar /Eliminar pacientes");
         botonconsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonconsultaActionPerformed(evt);
@@ -47,7 +47,7 @@ public class principal extends javax.swing.JFrame {
         });
 
         botonagregar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        botonagregar.setText("Agregar / Eliminar pacientes");
+        botonagregar.setText("Agregar pacientes");
         botonagregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonagregarActionPerformed(evt);
