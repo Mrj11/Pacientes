@@ -15,7 +15,7 @@ create table paciente (
 idpaciente int auto_increment,
 nombre varchar (40),
 apellido varchar (40),
-tipodoc int,
+tipodoc varchar (20),
 nrodoc int,
 telefono int,
 email varchar (60),

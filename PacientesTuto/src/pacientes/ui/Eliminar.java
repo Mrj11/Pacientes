@@ -32,10 +32,51 @@ public class Eliminar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        confirmaeliminar = new javax.swing.JDialog();
+        jLabel3 = new javax.swing.JLabel();
+        botonokeliminar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         Vid = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         BotonEliminar = new javax.swing.JButton();
+
+        confirmaeliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        confirmaeliminar.setMinimumSize(new java.awt.Dimension(302, 140));
+        confirmaeliminar.setModal(true);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setText("Paciente eliminado correctamente");
+
+        botonokeliminar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        botonokeliminar.setText("Ok");
+        botonokeliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonokeliminarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout confirmaeliminarLayout = new javax.swing.GroupLayout(confirmaeliminar.getContentPane());
+        confirmaeliminar.getContentPane().setLayout(confirmaeliminarLayout);
+        confirmaeliminarLayout.setHorizontalGroup(
+            confirmaeliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(confirmaeliminarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, confirmaeliminarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonokeliminar)
+                .addGap(115, 115, 115))
+        );
+        confirmaeliminarLayout.setVerticalGroup(
+            confirmaeliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(confirmaeliminarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botonokeliminar)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,6 +90,11 @@ public class Eliminar extends javax.swing.JFrame {
 
         BotonEliminar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         BotonEliminar.setText("Eliminar");
+        BotonEliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonEliminarMouseClicked(evt);
+            }
+        });
         BotonEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonEliminarActionPerformed(evt);
@@ -81,7 +127,7 @@ public class Eliminar extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(Vid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BotonEliminar))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
@@ -90,6 +136,14 @@ public class Eliminar extends javax.swing.JFrame {
     private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
         runQueryEliminar();
     }//GEN-LAST:event_BotonEliminarActionPerformed
+
+    private void botonokeliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonokeliminarActionPerformed
+        confirmaeliminar.dispose();
+    }//GEN-LAST:event_botonokeliminarActionPerformed
+
+    private void BotonEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonEliminarMouseClicked
+        this.confirmaeliminar.setVisible(true);
+    }//GEN-LAST:event_BotonEliminarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -129,8 +183,11 @@ public class Eliminar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonEliminar;
     private javax.swing.JTextField Vid;
+    private javax.swing.JButton botonokeliminar;
+    private javax.swing.JDialog confirmaeliminar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 
 private void runQueryEliminar() {
