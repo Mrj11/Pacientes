@@ -8,9 +8,6 @@
           <Dimension value="[335, 150]"/>
         </Property>
         <Property name="modal" type="boolean" value="true"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[326, 105]"/>
-        </Property>
       </Properties>
 
       <Layout>
@@ -122,17 +119,17 @@
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="Vtelefono" max="32767" attributes="0"/>
+                                      <Component id="Vtelefono" pref="150" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="Vnro" min="-2" pref="125" max="-2" attributes="0"/>
+                                      <Component id="Vnro" min="-2" pref="105" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="Vemail" pref="123" max="32767" attributes="0"/>
+                                      <Component id="Vemail" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -172,7 +169,7 @@
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="35" max="32767" attributes="0"/>
+              <EmptySpace pref="148" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="Bguardar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="listapaciente" alignment="3" min="-2" max="-2" attributes="0"/>

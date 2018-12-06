@@ -1,5 +1,5 @@
 package pacientes.entity;
-// Generated 30-nov-2018 19:32:04 by Hibernate Tools 4.3.1
+// Generated 06-dic-2018 4:24:06 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;

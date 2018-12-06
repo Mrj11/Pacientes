@@ -55,7 +55,6 @@ public class Carga extends javax.swing.JFrame {
 
         VentanaGuardar.setMinimumSize(new java.awt.Dimension(335, 150));
         VentanaGuardar.setModal(true);
-        VentanaGuardar.setPreferredSize(new java.awt.Dimension(326, 105));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setText("El paciente fue guardado exitosamente");
@@ -208,16 +207,16 @@ public class Carga extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel3)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Vtelefono))
+                                        .addComponent(Vtelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(8, 8, 8)
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Vnro, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Vnro, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel6)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Vemail, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)))))
+                                        .addComponent(Vemail)))))
                         .addGap(10, 10, 10))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(listapaciente)
@@ -246,7 +245,7 @@ public class Carga extends javax.swing.JFrame {
                     .addComponent(Vemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Bguardar)
                     .addComponent(listapaciente))
