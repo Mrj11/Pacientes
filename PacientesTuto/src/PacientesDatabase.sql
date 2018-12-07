@@ -11,15 +11,6 @@
 create database pacientes;
 use pacientes;
 
-create table paciente (
-idpaciente int auto_increment,
-nombre varchar (40),
-apellido varchar (40),
-tipodoc int,
-nrodoc int,
-telefono int,
-email varchar (60),
-constraint pk_idpaciente primary key (idpaciente));
 
 create table provincia(
 idprovincia int,
@@ -45,12 +36,23 @@ piso int,
 dpto int,
 fklocalidad int,
 fkprovincia int,
-fkidpaciente int,
 constraint pk_iddomicilio primary key (id_domicilio),
-constraint fk_idpac foreign key (fkidpaciente) references paciente(idpaciente),
 constraint fk_local foreign key (fklocalidad) references localidad(idlocalidad),
 constraint fk_prov foreign key (fkprovincia) references provincia(idprovincia)
 );
+
+create table paciente (
+idpaciente int auto_increment,
+nombre varchar (40),
+apellido varchar (40),
+tipodoc varchar (30),
+nrodoc int,
+telefono int,
+email varchar (60),
+iddomicilio int,
+constraint pk_idpaciente primary key (idpaciente),
+constraint fk_iddomicilio foreign key (iddomicilio) references domicilio(id_domicilio));
+
 
 insert into provincia
 values (1,'Buenos Aires');
@@ -98,3 +100,5 @@ insert into provincia
 values (22, 'Tierra del Fuego');
 insert into provincia
 values (23, 'Tucuman');
+
+insert into paciente values (null,'Marcos', 'jabase', 'Dni', 41322590, 351808251, 'm.rjabase@hotmail.com', null)
