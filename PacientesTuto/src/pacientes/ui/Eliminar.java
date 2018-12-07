@@ -147,10 +147,6 @@ public class Eliminar extends javax.swing.JFrame {
              evt.consume();
              this.SoloNmro.setVisible(true);
          }
-         else
-         {
-             
-         }
     }//GEN-LAST:event_VidKeyTyped
 
     private void okbotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okbotonActionPerformed

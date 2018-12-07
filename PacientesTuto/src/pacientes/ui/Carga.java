@@ -411,10 +411,7 @@ public class Carga extends javax.swing.JFrame {
              evt.consume();
              this.SoloLetras.setVisible(true);
          }
-         else
-         {
-             
-         }
+  
         
     }//GEN-LAST:event_VnombreKeyTyped
 
@@ -425,10 +422,6 @@ public class Carga extends javax.swing.JFrame {
              evt.consume();
              this.SoloLetras.setVisible(true);
          }
-         else
-         {
-             
-         }
     }//GEN-LAST:event_VapellidoKeyTyped
 
     private void VtelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VtelefonoKeyTyped
@@ -438,10 +431,6 @@ public class Carga extends javax.swing.JFrame {
              evt.consume();
              this.SoloNmro.setVisible(true);
          }
-         else
-         {
-             
-         }
     }//GEN-LAST:event_VtelefonoKeyTyped
 
     private void VnroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VnroKeyTyped
@@ -450,10 +439,6 @@ public class Carga extends javax.swing.JFrame {
          {
              evt.consume();
              this.SoloNmro.setVisible(true);
-         }
-         else
-         {
-             
          }
     }//GEN-LAST:event_VnroKeyTyped
 
