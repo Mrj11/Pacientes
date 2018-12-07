@@ -32,17 +32,66 @@ public class Eliminar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        SoloNmro = new javax.swing.JDialog();
+        jLabel3 = new javax.swing.JLabel();
+        okboton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         Vid = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         BotonEliminar = new javax.swing.JButton();
 
+        SoloNmro.setTitle("Error");
+        SoloNmro.setMinimumSize(new java.awt.Dimension(326, 127));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setText("Ups! Ingrese solo numeros");
+
+        okboton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        okboton.setText("Ok");
+        okboton.setMaximumSize(new java.awt.Dimension(329, 100));
+        okboton.setMinimumSize(new java.awt.Dimension(329, 100));
+        okboton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                okbotonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout SoloNmroLayout = new javax.swing.GroupLayout(SoloNmro.getContentPane());
+        SoloNmro.getContentPane().setLayout(SoloNmroLayout);
+        SoloNmroLayout.setHorizontalGroup(
+            SoloNmroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SoloNmroLayout.createSequentialGroup()
+                .addContainerGap(60, Short.MAX_VALUE)
+                .addGroup(SoloNmroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SoloNmroLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(53, 53, 53))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SoloNmroLayout.createSequentialGroup()
+                        .addComponent(okboton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(136, 136, 136))))
+        );
+        SoloNmroLayout.setVerticalGroup(
+            SoloNmroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SoloNmroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(okboton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Eliminar Pacientes");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Ingrese el Id del paciente a eliminar:");
 
         Vid.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Vid.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                VidKeyTyped(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("ID:");
@@ -91,6 +140,23 @@ public class Eliminar extends javax.swing.JFrame {
         runQueryEliminar();
     }//GEN-LAST:event_BotonEliminarActionPerformed
 
+    private void VidKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VidKeyTyped
+        char c = evt.getKeyChar();
+         if (c<'0' || c>'9')
+         {
+             evt.consume();
+             this.SoloNmro.setVisible(true);
+         }
+         else
+         {
+             
+         }
+    }//GEN-LAST:event_VidKeyTyped
+
+    private void okbotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okbotonActionPerformed
+        SoloNmro.dispose();
+    }//GEN-LAST:event_okbotonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -128,9 +194,12 @@ public class Eliminar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonEliminar;
+    private javax.swing.JDialog SoloNmro;
     private javax.swing.JTextField Vid;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton okboton;
     // End of variables declaration//GEN-END:variables
 
 private void runQueryEliminar() {

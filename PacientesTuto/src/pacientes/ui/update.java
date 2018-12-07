@@ -16,12 +16,12 @@ import pacientes.entity.Paciente;
  *
  * @author mrjab
  */
-public class Carga extends javax.swing.JFrame {
+public class update extends javax.swing.JFrame {
 
     /**
      * Creates new form Carga
      */
-    public Carga() {
+    public update() {
         initComponents();
     }
 
@@ -37,12 +37,6 @@ public class Carga extends javax.swing.JFrame {
         VentanaGuardar = new javax.swing.JDialog();
         jLabel8 = new javax.swing.JLabel();
         okButton = new javax.swing.JButton();
-        SoloLetras = new javax.swing.JDialog();
-        jLabel9 = new javax.swing.JLabel();
-        oktexto = new javax.swing.JButton();
-        SoloNmro = new javax.swing.JDialog();
-        jLabel10 = new javax.swing.JLabel();
-        OkNmro = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -98,88 +92,7 @@ public class Carga extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        SoloLetras.setTitle("Error");
-        SoloLetras.setMaximumSize(new java.awt.Dimension(229, 90));
-        SoloLetras.setMinimumSize(new java.awt.Dimension(229, 90));
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setText("Ups! Solo letras por favor");
-
-        oktexto.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        oktexto.setText("Ok");
-        oktexto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                oktextoActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout SoloLetrasLayout = new javax.swing.GroupLayout(SoloLetras.getContentPane());
-        SoloLetras.getContentPane().setLayout(SoloLetrasLayout);
-        SoloLetrasLayout.setHorizontalGroup(
-            SoloLetrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SoloLetrasLayout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
-                .addGroup(SoloLetrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SoloLetrasLayout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(45, 45, 45))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SoloLetrasLayout.createSequentialGroup()
-                        .addComponent(oktexto)
-                        .addGap(118, 118, 118))))
-        );
-        SoloLetrasLayout.setVerticalGroup(
-            SoloLetrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SoloLetrasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(oktexto)
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
-
-        SoloNmro.setTitle("Error");
-        SoloNmro.setMaximumSize(new java.awt.Dimension(229, 90));
-        SoloNmro.setMinimumSize(new java.awt.Dimension(229, 90));
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel10.setText("Ups! Ingrese solo numeros");
-        jLabel10.setMaximumSize(new java.awt.Dimension(213, 32));
-        jLabel10.setMinimumSize(new java.awt.Dimension(213, 32));
-
-        OkNmro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        OkNmro.setText("Ok");
-        OkNmro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OkNmroActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout SoloNmroLayout = new javax.swing.GroupLayout(SoloNmro.getContentPane());
-        SoloNmro.getContentPane().setLayout(SoloNmroLayout);
-        SoloNmroLayout.setHorizontalGroup(
-            SoloNmroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SoloNmroLayout.createSequentialGroup()
-                .addGroup(SoloNmroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SoloNmroLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(SoloNmroLayout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addComponent(OkNmro)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        SoloNmroLayout.setVerticalGroup(
-            SoloNmroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SoloNmroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(OkNmro)
-                .addContainerGap())
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Carga de Pacientes");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Nombre");
@@ -207,11 +120,6 @@ public class Carga extends javax.swing.JFrame {
                 VnombreActionPerformed(evt);
             }
         });
-        Vnombre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                VnombreKeyTyped(evt);
-            }
-        });
 
         Vapellido.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Vapellido.addActionListener(new java.awt.event.ActionListener() {
@@ -219,20 +127,10 @@ public class Carga extends javax.swing.JFrame {
                 VapellidoActionPerformed(evt);
             }
         });
-        Vapellido.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                VapellidoKeyTyped(evt);
-            }
-        });
 
         Vtelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VtelefonoActionPerformed(evt);
-            }
-        });
-        Vtelefono.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                VtelefonoKeyTyped(evt);
             }
         });
 
@@ -242,11 +140,6 @@ public class Carga extends javax.swing.JFrame {
         Vnro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VnroActionPerformed(evt);
-            }
-        });
-        Vnro.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                VnroKeyTyped(evt);
             }
         });
 
@@ -404,67 +297,6 @@ public class Carga extends javax.swing.JFrame {
         this.VentanaGuardar.setVisible(true);
     }//GEN-LAST:event_BguardarMouseClicked
 
-    private void VnombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VnombreKeyTyped
-        char c = evt.getKeyChar();
-         if ((c<'a' || c>'z') && (c<'A' || c>'Z'))
-         {
-             evt.consume();
-             this.SoloLetras.setVisible(true);
-         }
-         else
-         {
-             
-         }
-        
-    }//GEN-LAST:event_VnombreKeyTyped
-
-    private void VapellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VapellidoKeyTyped
-        char c = evt.getKeyChar();
-         if ((c<'a' || c>'z') && (c<'A' || c>'Z'))
-         {
-             evt.consume();
-             this.SoloLetras.setVisible(true);
-         }
-         else
-         {
-             
-         }
-    }//GEN-LAST:event_VapellidoKeyTyped
-
-    private void VtelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VtelefonoKeyTyped
-        char c = evt.getKeyChar();
-         if (c<'0' || c>'9')
-         {
-             evt.consume();
-             this.SoloNmro.setVisible(true);
-         }
-         else
-         {
-             
-         }
-    }//GEN-LAST:event_VtelefonoKeyTyped
-
-    private void VnroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VnroKeyTyped
-        char c = evt.getKeyChar();
-         if (c<'0' || c>'9')
-         {
-             evt.consume();
-             this.SoloNmro.setVisible(true);
-         }
-         else
-         {
-             
-         }
-    }//GEN-LAST:event_VnroKeyTyped
-
-    private void oktextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oktextoActionPerformed
-        SoloLetras.dispose();
-    }//GEN-LAST:event_oktextoActionPerformed
-
-    private void OkNmroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkNmroActionPerformed
-        SoloNmro.dispose();
-    }//GEN-LAST:event_OkNmroActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -482,29 +314,27 @@ public class Carga extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Carga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(update.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Carga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(update.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Carga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(update.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Carga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(update.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Carga().setVisible(true);
+                new update().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Bguardar;
-    private javax.swing.JButton OkNmro;
-    private javax.swing.JDialog SoloLetras;
-    private javax.swing.JDialog SoloNmro;
     private javax.swing.JTextField Vapellido;
     private javax.swing.JTextField Vemail;
     private javax.swing.JDialog VentanaGuardar;
@@ -513,7 +343,6 @@ public class Carga extends javax.swing.JFrame {
     private javax.swing.JTextField Vtelefono;
     private javax.swing.JComboBox<String> Vtipodoc;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -521,10 +350,8 @@ public class Carga extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JButton listapaciente;
     private javax.swing.JButton okButton;
-    private javax.swing.JButton oktexto;
     // End of variables declaration//GEN-END:variables
 
 private void runQueryGuardar() {
