@@ -71,28 +71,28 @@ public class Lista extends javax.swing.JFrame {
 
         Resultados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Id", "Nombre", "Apellido", "Telefono", "Tipo Documento", "Nro Documento", "E-mail"
+                "Id", "Nombre", "Apellido", "Telefono", "Tipo Documento", "Nro Documento", "E-mail", "Id Domicilio"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -171,6 +171,7 @@ public class Lista extends javax.swing.JFrame {
     tableHeaders.add("Tipo de documento");
     tableHeaders.add("Documento");
     tableHeaders.add("E-mail");
+    tableHeaders.add("Id Domicilio");
  
     for(Object o : resultList) {
         Paciente lp = (Paciente)o;
@@ -182,6 +183,7 @@ public class Lista extends javax.swing.JFrame {
         oneRow.add(lp.getTipodoc());
         oneRow.add(lp.getNrodoc());
         oneRow.add(lp.getEmail());
+        oneRow.add(lp.getDomicilio());
         tableData.add(oneRow);
     }
     Resultados.setModel(new DefaultTableModel(tableData, tableHeaders));

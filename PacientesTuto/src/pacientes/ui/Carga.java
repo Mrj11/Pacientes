@@ -10,6 +10,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import paciente.util.HibernateUtil;
+import pacientes.entity.Domicilio;
 import pacientes.entity.Paciente;
 
 /**
@@ -516,11 +517,34 @@ private void runQueryGuardar() {
     executeHQLQuery();
 }
 
+
+
 private void executeHQLQuery() {
     try {
 	Session session = HibernateUtil.getSessionFactory().openSession();
 	session.beginTransaction();
        
+         Domicilio domicilio = new Domicilio();
+        domicilio.setCalle("calle ej");
+        session.saveOrUpdate(domicilio);
+        domicilio = (Domicilio) session.merge(domicilio);
+        
+        /*
+	session.getTransaction().commit();
+        
+        System.out.println(domicilio.getIdDomicilio());
+
+
+    } catch (HibernateException he) {
+        he.printStackTrace();
+    }
+}
+
+private void executeHQLQuery2() {
+    try {
+	Session session = HibernateUtil.getSessionFactory().openSession();
+	session.beginTransaction();    */   
+               
 	//Add new Employee object
 	Paciente p = new Paciente();
 	p.setIdpaciente(null);
@@ -530,7 +554,11 @@ private void executeHQLQuery() {
 	p.setNrodoc(Integer.valueOf(Vnro.getText()));
         p.setTelefono(Integer.valueOf(Vtelefono.getText()));
         p.setEmail(Vemail.getText());
-	session.save(p);
+        
+        p.setDomicilio(domicilio);
+        
+	session.saveOrUpdate(p);
+        session.merge(p);
 
 	session.getTransaction().commit();
     } catch (HibernateException he) {
@@ -538,5 +566,7 @@ private void executeHQLQuery() {
     }
 }
 
+
 }
+
 

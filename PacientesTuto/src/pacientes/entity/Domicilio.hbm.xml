@@ -29,7 +29,7 @@
         <property name="dpto" type="java.lang.Integer">
             <column name="dpto" />
         </property>
-        <set name="pacientes" table="paciente" inverse="true" lazy="true" fetch="select">
+        <set name="pacientes" table="paciente" inverse="true" lazy="true" fetch="select" cascade ="all">
             <key>
                 <column name="iddomicilio" />
             </key>
